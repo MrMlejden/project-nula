@@ -10,26 +10,27 @@
             <div class="side-menu">
                 <hr />
             </div>
-            <div class="accordion">
+            <div class="accordion px-4">
                 <div>
-                    <div class="container d-flex user-badge">
-                        <div
-                            class="d-flex p-1"
+                    <div class="d-flex user-badge">
+                        <a
+                            href="#"
+                            class="d-flex c-pointer"
                             data-toggle="collapse"
                             data-target="#collapseOne"
                             aria-expanded="false"
                             aria-controls="collapseOne"
                         >
-                            <div class="user-photo p-1 m-1">
+                            <div class="user-photo p-1 mt-1 ml-1 mb-1 ml-0">
                                 <img alt="Vue logo" src="../assets/manager.png" height="25" width="25" />
                             </div>
                             <div class="user-info pl-2 pt-2">{{ fullName }}</div>
                             <div class="arrow-expander fas fa-angle-right"></div>
-                        </div>
+                        </a>
                     </div>
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div class="container pl-5 pt-2">
-                            <div class="d-flex">
+                        <div class="container pt-2">
+                            <div class="d-flex pl-4">
                                 <i class="fas fa-angle-right p-1"></i>
                                 <router-link class="d-flex" to="/about">Settings</router-link>
                             </div>
@@ -42,26 +43,26 @@
                 <hr />
             </div>
 
-            <div class="accordion">
+            <div class="accordion px-4">
                 <div>
-                    <div class="container d-flex align-items-baseline">
-                        <i class="pl-1 fas fa-tachometer-alt"></i>
+                    <a href="#" class="user-badge d-flex align-items-baseline c-pointer">
+                        <div class="user-photo p-1 mt-1 ml-1 mb-1 ml-0">
+                            <i class="fa-fw text-dark fas fa-table pt-1"></i>
+                        </div>
                         <span
-                            class="d-flex p-1"
+                            class="d-flex pl-2 pt-2"
                             data-toggle="collapse"
                             data-target="#collapseThree"
                             aria-expanded="false"
                             aria-controls="collapseThree"
                             >Dashboard</span
                         >
-                    </div>
+                    </a>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="container d-flex">
-                            <ul>
-                                <li>
-                                    <router-link class="d-flex" to="/data">Data Tables</router-link>
-                                </li>
-                            </ul>
+                            <router-link class="d-flex py-2 ml-4" to="/data">
+                                <i class="fas fa-angle-right p-1"></i>Data Tables
+                            </router-link>
                         </div>
                     </div>
                 </div>
@@ -89,49 +90,3 @@ export default {
     }
 };
 </script>
-
-<style lang="scss">
-.user-photo {
-    background-color: #42b983;
-    border-radius: 20px;
-}
-
-.user-info {
-    /*padding-top: 10px;*/
-}
-
-.user-badge {
-    cursor: pointer;
-}
-
-.arrow-expander {
-    position: absolute;
-    right: 20px;
-    padding-top: 11px;
-}
-
-.sidenav {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #2d4446;
-    padding-top: 10px;
-}
-
-.side-menu {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-hr {
-    border-top: 1px solid #8a909a;
-}
-
-.menu-headlines {
-    font-weight: bold;
-    text-align: left;
-    color: rgba(19, 18, 18, 0.25);
-}
-</style>

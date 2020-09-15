@@ -1,31 +1,34 @@
 <template>
-    <div class="main-wrapper">
-        <router-link to="/data">Back</router-link>
-
-        <div class="profile-wrapper">
-            <div class="profile-info p-1">
-                <h4 class="info-header">Professional Details</h4>
-                <div class="profile-picture"><img src="" alt="image" /></div>
-                <div class="profile-info-details d-block text-left">
-                    <h6 class="mt-3">Name: {{ profile.name }}</h6>
-                    <h6>Email: {{ profile.email }}</h6>
-                    <h6>Phone: {{ profile.phone }}</h6>
-                    <h6>Company Name: {{ profile.username }}</h6>
+    <div class="container-fluid mt-3">
+        <div class="form-row">
+            <div class="col-12 text-left mb-3">
+                <router-link to="/data"><i class="fas fa-angle-left"></i> Back</router-link>
+            </div>
+            <div class="col-3">
+                <h5 class="info-header">Professional Details</h5>
+                <div class="profile-info">
+                    <div class="profile-picture rounded-top"><img src="" alt="image" /></div>
+                    <div class="profile-info-details d-block text-left p-3">
+                        <h6><span class="font-weight-bold">Name:</span> {{ profile.name }}</h6>
+                        <h6><span class="font-weight-bold">Email:</span> {{ profile.email }}</h6>
+                        <h6><span class="font-weight-bold">Phone:</span> {{ profile.phone }}</h6>
+                        <h6 class="mb-0"><span class="font-weight-bold">Company Name:</span> {{ profile.username }}</h6>
+                    </div>
                 </div>
             </div>
-
-            <div class="profile-details">
-                <div class="profile-details-header mb-2">List of Albums:</div>
-
-                <div class="list-group mb-2 ml-2 mr-2" v-for="post in posts" :key="post.id">
-                    <a class="list-group-item list-group-item-action flex-column align-items-start">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-2 font-weight-bold text-capitalize">{{ post.title }}</h5>
-                            <small>{{ post.title.length }} days ago</small>
-                        </div>
-                        <p class="mb-1 text-sm-left">{{ post.body }}</p>
-                        <small>Donec id elit non mi porta.</small>
-                    </a>
+            <div class="col-9">
+                <div class="profile-details">
+                    <div class="h5 mb-2">List of Albums:</div>
+                    <div class="list-group mb-2" v-for="post in posts" :key="post.id">
+                        <a class="list-group-item list-group-item-action flex-column align-items-start py-3">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-2 font-weight-bold text-capitalize">{{ post.title }}</h6>
+                                <small>{{ post.title.length }} days ago</small>
+                            </div>
+                            <p class="text-sm-left">{{ post.body }}</p>
+                            <small>Donec id elit non mi porta.</small>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -91,11 +94,6 @@ export default {
     border-radius: 10px;
 }
 
-.info-header {
-    display: flex;
-    justify-content: center;
-}
-
 .profile-picture {
     background-color: yellowgreen;
     min-height: 300px;
@@ -105,15 +103,8 @@ export default {
     align-items: center;
 }
 
-.profile-wrapper {
-    padding: 20px;
-    display: flex;
-}
-
 .profile-details {
     border-radius: 10px;
-    margin-left: 20px;
     width: 100%;
-    background-color: #fff;
 }
 </style>
