@@ -95,9 +95,8 @@ export default {
 }
 
 .profile-picture {
-    background-color: yellowgreen;
+    background-color: #42b983;
     min-height: 300px;
-    min-width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;

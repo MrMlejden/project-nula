@@ -6,14 +6,14 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         profile: {
-            username: 'johnsmith',
+            username: '@johnsmith',
             email: null,
             firstName: 'John',
             lastName: 'Smith',
             address: null,
-            city: null,
-            country: null,
-            zipCode: null,
+            city: 'Belgrade',
+            country: 'Serbia',
+            zipCode: '11460',
             aboutMe: null
         }
     },

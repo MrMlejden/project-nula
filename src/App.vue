@@ -1,5 +1,3 @@
-<style lang="scss" src="./app.scss"></style>
-
 <template>
     <div id="app">
         <div class="main-wrapper">
@@ -19,3 +17,5 @@ export default {
     }
 };
 </script>
+
+<style lang="scss" src="./app.scss"></style>
