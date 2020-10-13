@@ -1,9 +1,13 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import todos from './modules/todos';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+    modules: {
+        todos
+    },
     state: {
         profile: {
             username: '@johnsmith',
@@ -15,7 +19,7 @@ export default new Vuex.Store({
             country: 'Serbia',
             zipCode: '11460',
             aboutMe: null
-        }
+        },
     },
     getters: {},
     mutations: {

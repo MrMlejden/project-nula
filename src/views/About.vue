@@ -12,7 +12,7 @@ import profilePreview from '@/components/profilePreview';
 import editProfile from '@/components/editProfile';
 
 export default {
-    name: 'about',
+    name: 'About',
     components: { profilePreview, editProfile }
 };
 </script>

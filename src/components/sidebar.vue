@@ -61,7 +61,14 @@
                     <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="container d-flex">
                             <router-link class="d-flex py-2 ml-4" to="/data">
-                                <i class="fas fa-angle-right p-1"></i>Data Tables
+                                <i class="fas fa-angle-right p-1"></i>
+                                Data Tables
+                            </router-link>
+                        </div>
+                        <div class="container d-flex">
+                            <router-link class="d-flex py-2 ml-4" to="/Todos">
+                                <i class="fas fa-angle-right p-1"></i>
+                                TODO's
                             </router-link>
                         </div>
                     </div>

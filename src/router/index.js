@@ -5,6 +5,7 @@ import Home from '../views/Home.vue';
 import About from '../views/About.vue';
 import Data from '../views/Data.vue';
 import Profile from '../views/Profile.vue';
+import Todos from '../components/Todos.vue';
 
 Vue.use(VueRouter);
 
@@ -23,6 +24,11 @@ const routes = [
         path: '/data',
         name: 'Data',
         component: Data
+    },
+    {
+        path: '/todos',
+        name: 'Todos',
+        component: Todos
     },
     {
         path: '/user/:id',

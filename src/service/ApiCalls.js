@@ -20,5 +20,9 @@ export default {
 
     getPosts() {
         return apiClient.get('/posts/');
+    },
+
+    getTodos() {
+        return apiClient.get('/todos/'); // ?_limit=10
     }
 };
