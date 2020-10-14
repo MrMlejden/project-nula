@@ -2,9 +2,29 @@
     <div class="container">
         <AddTodo></AddTodo>
         <FilterTodos></FilterTodos>
+
         <h3 class="py-3">TODO's</h3>
+        <div class="legend pb-3">
+            <span class="pr-3">Double click to mark as complete:</span>
+            <span class="float-right pr-4">
+                <span class="incomplete-box pr-3">
+                    <i class="fas fa-square"></i>
+                    Incomplete
+                </span>
+                <span class="complete-box">
+                    <i class="fas fa-square"></i>
+                    Complete
+                </span>
+            </span>
+        </div>
         <div class="todos">
-            <div class="todo" v-for="todo in allTodos" :key="todo.id">
+            <div
+                class="todo"
+                @dblclick="onDblClick(todo)"
+                :class="{ 'is-complete': !todo.completed }"
+                v-for="todo in allTodos"
+                :key="todo.id"
+            >
                 <div class="image-todos"></div>
                 <div class="content">{{ todo.title }}</div>
                 <div class="footer-todo">
@@ -27,7 +47,16 @@ export default {
         FilterTodos
     },
     methods: {
-        ...mapActions(['fetchTodos', 'deleteTodo'])
+        ...mapActions(['fetchTodos', 'deleteTodo', 'updateTodo']),
+        onDblClick(todo) {
+            const updTodo = {
+                id: todo.id,
+                title: todo.title,
+                completed: !todo.completed
+            };
+
+            this.updateTodo(updTodo);
+        }
     },
     computed: mapGetters(['allTodos']),
     created() {
@@ -74,6 +103,23 @@ export default {
                 cursor: pointer;
             }
         }
+    }
+
+    .is-complete {
+        background-color: #35495e;
+        color: #fff;
+    }
+}
+
+.incomplete-box {
+    i {
+        color: #35495e;
+    }
+}
+
+.complete-box {
+    i {
+        color: #41b883;
     }
 }
 </style>

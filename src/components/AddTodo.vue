@@ -52,5 +52,6 @@ input[type='submit'] {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     cursor: pointer;
+    outline: 0;
 }
 </style>
