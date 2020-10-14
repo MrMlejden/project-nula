@@ -36,7 +36,7 @@
                 </p>
                 <h5 class="mt-5">LOREM IPUSUM DOLOR</h5>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item bg-transparent px-0"> In maximus justo tortor Cras justo odio</li>
+                    <li class="list-group-item bg-transparent px-0">In maximus justo tortor Cras justo odio mla</li>
                     <li class="list-group-item bg-transparent px-0">Dapibus ac facilisis in turpis blandit</li>
                     <li class="list-group-item bg-transparent px-0">Morbi leo risus efficitur tristiqu</li>
                     <li class="list-group-item bg-transparent px-0">Porta ac sollicitudin consectetur ac</li>
