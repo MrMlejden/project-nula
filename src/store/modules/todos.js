@@ -27,18 +27,15 @@ const actions = {
     },
 
     async filterTodos({ commit }, event) {
-        const selectedNumber = parseInt(event.target.options[event.target.options.selectedIndex].innerText);
+        const selectedNumber = parseInt(event.target.value);
 
         const response = await axios.get(`https://jsonplaceholder.typicode.com/todos?_limit=${selectedNumber}`);
 
         commit('setTodos', response.data);
-        // console.log(selectedNumber);
     },
 
     async updateTodo({ commit }, updTodo) {
         const response = await axios.put(`https://jsonplaceholder.typicode.com/todos/${updTodo.id}`, updTodo);
-
-        console.log(response.data);
 
         commit('updateTodo', response.data);
     }
@@ -53,9 +50,8 @@ const mutations = {
 
     updateTodo: (state, updTodo) => {
         const index = state.todos.findIndex(todo => todo.id === updTodo.id);
-        if (index != -1) {
-            state.todos.splice(index, 1, updTodo);
-        }
+
+        if (index != -1) state.todos.splice(index, 1, updTodo);
     }
 };
 
